@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Table {
-    private List<String> columns = new ArrayList<>();
-    private List<List<Object>> rows = new ArrayList<>();
+    private ArrayList<String> columns = new ArrayList<>();
+    private ArrayList<ArrayList<String>> rows = new ArrayList<>();
 
     public Table(String... columnNames) {
         for (int i = 0; i < columnNames.length; i++) {
@@ -28,5 +28,12 @@ public class Table {
             }
         }
         return -1;
+    }
+    public void addRow(String...values) {
+        ArrayList<String> row = new ArrayList<>();
+        for (int i = 0; i < values.length; i++) {
+            row.add(values[i]);
+        }
+        rows.add(row);
     }
 }
