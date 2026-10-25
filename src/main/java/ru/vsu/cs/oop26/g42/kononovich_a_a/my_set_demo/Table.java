@@ -36,4 +36,9 @@ public class Table {
         }
         rows.add(row);
     }
+
+    public String get(int rowNumber, String columnName) {
+        int c = columnIndex(columnName);
+        return rows.get(rowNumber).get(c);
+    }
 }
