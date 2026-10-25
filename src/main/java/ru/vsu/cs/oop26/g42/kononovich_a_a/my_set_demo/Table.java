@@ -41,4 +41,18 @@ public class Table {
         int c = columnIndex(columnName);
         return rows.get(rowNumber).get(c);
     }
+
+    public void print() {
+        for (int c = 0; c < columns.size(); c++) {
+            System.out.print(columns.get(c) + "\t");
+        }
+        System.out.println();
+        for (int r = 0; r < rows.size(); r++) {
+            for (int c = 0; c < columns.size(); c++) {
+                System.out.print(rows.get(r).get(c) + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }

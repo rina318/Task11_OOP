@@ -3,15 +3,15 @@ package ru.vsu.cs.oop26.g42.kononovich_a_a.my_set_demo;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+    public static void main(String[] args) {
+        Table t = new Table("Имя", "Должность", "Город", "Зарплата");
+        t.addRow("Анна", "Программист", "Москва", "150000");
+        t.addRow("Борис", "Менеджер", "Казань", "120000");
+        t.addRow("Вера", "Рекламщик", "Москва", "90000");
+        t.addRow("Глеб", "Маркетолог", "Москва", "95000");
+        t.addRow("Дима", "Тимлид", "Казань", "110000");
+        t.addRow("Ева", "Дизайнер", "Москва", "170000");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        t.print();
     }
 }
